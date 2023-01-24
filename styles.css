@@ -1,0 +1,590 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+
+  --bg-color: #fff;
+  --nav-color:#f8f8f8;
+  --border-color: #e5e5e5;
+  --text-color: #000;
+  
+}
+
+[data-theme="dark"] {
+  
+  --bg-color: #393e46;
+  --nav-color: #25252599;
+  --border-color: #818cab;
+  --text-color: #eeeeee;
+}
+/* scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #23232e;
+}
+::-webkit-scrollbar-thumb {
+  background: #66bb6a;
+}
+.navbar {
+  padding: 0 35px 0 35px;
+  margin-bottom: 25px;
+}
+.nav .right{
+  /* float: right; */
+  display: flex;
+  flex-direction: row;
+  /* list-style: none; */
+  padding: 15px 30px;
+  /* float: right; */
+}
+.theme-switch-wrapper {
+  display: flex;
+  align-items: center;
+}
+.theme-switch {
+  display: inline-block;
+  height: 34px;
+  position: relative;
+  width: 60px;
+}
+
+.theme-switch input {
+  display:none;
+}
+
+.slider {
+  background-color: #ccc;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: .4s;
+}
+
+.slider:before {
+  background-color: #fff;
+  bottom: 4px;
+  content: "";
+  height: 26px;
+  left: 4px;
+  position: absolute;
+  transition: .4s;
+  width: 26px;
+}
+
+input:checked + .slider {
+  background-color: #66bb6a;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+h3.brand {
+  background: -webkit-linear-gradient(45deg, #2E3192, #1bffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+body {
+  background: var(--bg-color);
+}
+
+.containers {
+  width: 90%;
+  margin: 0 5%;
+}
+
+.navbar-light {
+  border-bottom: solid 1px var( --border-color);
+  background: var(--nav-color) !important;
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.15);
+}
+
+li.nav-item{
+  margin: 10px 15px 0;
+}
+.btn {
+  padding: 2px 4px !important;
+}
+
+
+
+.btn-git {
+  background: #525558;
+  color: #FFF;
+}
+
+.btn-git:hover {
+  background: #000;
+  color: #FFF;
+}
+
+.swatch_container {
+  background: var(--nav-color);
+  box-shadow: 0 10px 15px rgba(36, 37, 38, 0.08);
+  margin: 12px 0;
+}
+
+.swatch_container:hover {
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.6);
+  /* transform: scale(0.9); */
+}
+
+.swatch_details {
+  padding: 12px;
+  text-align: left;
+  text-transform: uppercase;
+  font-size: 15px;
+  color: var(--text-color);
+}
+
+.swatch_value {
+  font-weight: 700;
+}
+
+[class*="gradient"] {
+  width: 100%;
+  height: 200px;
+}
+
+.gradient_1 {
+  background: linear-gradient(45deg, #0575e6, #021b79);
+}
+
+.gradient_2 {
+  background: linear-gradient(45deg, #1e3c72, #2a5298);
+}
+
+.gradient_3 {
+  background: linear-gradient(45deg, #2a2a72, #009ffd);
+}
+
+.gradient_4 {
+  background: linear-gradient(45deg, #37D5D6, #36096D);
+}
+
+.gradient_5 {
+  background: linear-gradient(45deg, #09C6F9, #045DE9);
+}
+
+.gradient_6 {
+  background: linear-gradient(45deg, #009FFD, #2A2A72);
+}
+
+.gradient_7 {
+  background: linear-gradient(45deg, #B621FE, #1FD1F9);
+}
+
+.gradient_8 {
+  background: linear-gradient(45deg, #AD1DEB, #6E72FC);
+}
+
+.gradient_9 {
+  background: linear-gradient(45deg, #2A5470, #4C4177);
+}
+
+.gradient_10 {
+  background: linear-gradient(45deg, #43CBFF, #9708CC);
+}
+
+.gradient_11 {
+  background: linear-gradient(45deg, #8E78FF, #FC7D7B);
+}
+
+.gradient_12 {
+  background: linear-gradient(45deg, #83EAF1, #63A4FF);
+}
+
+.gradient_13 {
+  background: linear-gradient(45deg, #A4BFEF, #6A93CB);
+}
+
+.gradient_14 {
+  background: linear-gradient(45deg, #4884EE, #06BCFB);
+}
+
+.gradient_15 {
+  background: linear-gradient(45deg, #00A4E4, #FEFEFE);
+}
+
+.gradient_16 {
+  background: linear-gradient(45deg, #B066FE, #63E2FF);
+}
+
+.gradient_17 {
+  background: linear-gradient(45deg, #20BF55, #01BAEF);
+}
+
+.gradient_18 {
+  background: linear-gradient(45deg, #26F596, #0499F2);
+}
+
+.gradient_19 {
+  background: linear-gradient(45deg, #233329, #63D471);
+}
+
+.gradient_20 {
+  background: linear-gradient(45deg, #009245, #FCEE21);
+}
+
+.gradient_21 {
+  background: linear-gradient(45deg, #F53803, #F5D020);
+}
+
+.gradient_22 {
+  background: linear-gradient(45deg, #FFDD00, #FBB034);
+}
+
+.gradient_23 {
+  background: linear-gradient(45deg, #F9D976, #F39F86);
+}
+
+.gradient_24 {
+  background: linear-gradient(45deg, #FBD72B, #F9484A);
+}
+
+.gradient_25 {
+  background: linear-gradient(45deg, #FFCC2F, #EF5734);
+}
+
+.gradient_26 {
+  background: linear-gradient(45deg, #E8807F, #E6C84F);
+}
+
+.gradient_27 {
+  background: linear-gradient(45deg, #D4145A, #FBB03B);
+}
+
+.gradient_28 {
+  background: linear-gradient(45deg, #2C3E50, #000000);
+}
+
+.gradient_29 {
+  background: linear-gradient(45deg, #1E3B70, #29539B);
+}
+
+.gradient_30 {
+  background: linear-gradient(45deg, #0D324D, #7F5A83);
+}
+
+.gradient_31 {
+  background: linear-gradient(45deg, #051937, #A8EB12);
+}
+
+.gradient_32 {
+  background: linear-gradient(45deg, #00A8C5, #FFFF7E);
+}
+
+.gradient_33 {
+  background: linear-gradient(45deg, #FAD7A1, #E96D71);
+}
+
+.gradient_34 {
+  background: linear-gradient(45deg, #FAB2FF, #1904E5);
+}
+
+.gradient_35 {
+  background: linear-gradient(45deg, #3B2667, #BC78EC);
+}
+
+.gradient_36 {
+  background: linear-gradient(45deg, #FFAA85, #B3315F);
+}
+
+.gradient_37 {
+  background: linear-gradient(45deg, #C2FFD8, #465EFB);
+}
+
+.gradient_38 {
+  background: linear-gradient(45deg, #79F1A4, #0E5CAD);
+}
+
+.gradient_39 {
+  background: linear-gradient(45deg, #92FFC0, #002661);
+}
+
+.gradient_40 {
+  background: linear-gradient(45deg, #087EE1, #05E8BA);
+}
+
+.gradient_41 {
+  background: linear-gradient(45deg, #1E9AFE, #60DFCD);
+}
+
+.gradient_42 {
+  background: linear-gradient(45deg, #97CC04, #2D7DD2);
+}
+
+.gradient_43 {
+  background: linear-gradient(45deg, #a18cd1, #fbc2eb);
+}
+
+.gradient_44 {
+  background: linear-gradient(45deg, #ff9a9e, #fecfef);
+}
+
+.gradient_45 {
+  background: linear-gradient(45deg, #d4fc79, #96e6a1);
+}
+
+.gradient_46 {
+  background: linear-gradient(45deg, #fddb92, #d1fdff);
+}
+
+.gradient_47 {
+  background: linear-gradient(45deg, #cd9cf2, #f6f3ff);
+}
+
+.gradient_48 {
+  background: linear-gradient(45deg, #f78ca0, #fe9a8b);
+}
+
+.gradient_49 {
+  background: linear-gradient(45deg, #accbee, #e7f0fd);
+}
+
+.gradient_50 {
+  background: linear-gradient(45deg, #0ba360, #3cba92);
+}
+
+.gradient_51 {
+  background: linear-gradient(45deg, #74ebd5, #9face6);
+}
+
+.gradient_52 {
+  background: linear-gradient(45deg, #a3bded, #6991c7);
+}
+.gradient_53 {
+  background: linear-gradient(45deg, #3f51b1, #f7c978);
+}
+
+.gradient_54 {
+  background: linear-gradient(45deg, #f43b47, #453a94);
+}
+
+.gradient_55 {
+  background: linear-gradient(45deg, #13547a, #80d0c7);
+}
+
+.gradient_56 {
+  background: linear-gradient(45deg, #65689f, #b5aee4);
+}
+
+.gradient_57 {
+  background: linear-gradient(45deg, #868f96, #596164);
+}
+
+.gradient_58 {
+  background: linear-gradient(45deg, #ff5858, #f09819);
+}
+
+.gradient_59 {
+  background: linear-gradient(45deg, #64b3f4, #c2e59c);
+}
+
+.gradient_60 {
+  background: linear-gradient(45deg, #0fd850, #f9f047);
+}
+
+.gradient_61 {
+  background: linear-gradient(45deg, #e8fcfc, #f8837d);
+}
+
+.gradient_62 {
+  background: linear-gradient(45deg, #fd1377, #710935);
+}
+
+.gradient_63 {
+  background: linear-gradient(45deg, #0c179b, #001247);
+}
+
+.gradient_64 {
+  background: linear-gradient(45deg, #fff1bc, #6da47a);
+}
+
+.gradient_65 {
+  background: linear-gradient(45deg, #986db0, #bbbef5);
+}
+
+.gradient_66 {
+  background: linear-gradient(45deg, #f96669, #fdc35a);
+}
+
+.gradient_67 {
+  background: linear-gradient(45deg, #f78245, #d539e9);
+}
+
+.gradient_68 {
+  background: linear-gradient(45deg, #f7cac9, #92a8d1);
+}
+
+.gradient_69 {
+  background: linear-gradient(45deg, #fddd30, #d85152);
+}
+
+.gradient_70 {
+  background: linear-gradient(45deg, #ec5007, #7b1302);
+}
+
+.gradient_71 {
+  background: linear-gradient(45deg, #fafe34, #80adf4);
+}
+
+.gradient_72 {
+  background: linear-gradient(45deg, #40e0d0, #5d7d7a);
+}
+
+.gradient_73 {
+  background: linear-gradient(45deg, #2d84cd, #f77571);
+}
+
+.gradient_74{
+  background: linear-gradient(45deg, #49429f,#6f3a8d);
+}
+
+.gradient_75 {
+  background: linear-gradient(45deg,#fca623,#da3623);
+}
+
+.gradient_76 {
+  background: linear-gradient(45deg,#b3ea88,#72d227 );
+}
+
+.gradient_77{
+  background: linear-gradient(45deg,#3c1e60,#131d5e );
+}
+
+.gradient_78 {
+  background: linear-gradient(45deg,#ffbd37,#4c69bb );
+}
+
+.gradient_79 {
+  background: linear-gradient(45deg,#f99685,#e9f110 );
+}
+
+.gradient_80 {
+  background: linear-gradient(45deg, #50adf3,#07f7ef);
+}
+
+.gradient_81 {
+  background: linear-gradient(45deg,#65def9,#599ae1 );
+}
+
+.gradient_82 {
+  background: linear-gradient(45deg,#17f4fd,#9707fd );
+}
+
+.gradient_83 {
+  background: linear-gradient(45deg,#7202ed,#cc45fa );
+}
+
+.gradient_84 {
+  background: linear-gradient(45deg,#ed0787,#5400d2 );
+}
+
+.gradient_85 {
+  background: linear-gradient(45deg,#fd8437,#fff643 );
+}
+
+.gradient_86 {
+  background: linear-gradient(45deg,#e0ec30,#7021b3 );
+}
+
+.gradient_87 {
+  background: linear-gradient(45deg,#f05362,#f92184 );
+}
+
+.gradient_88 {
+  background: linear-gradient(45deg,#f88c70,#835089 );
+}
+
+.gradient_89 {
+  background: linear-gradient(45deg,#04f0c2,#4902bb );
+}
+
+.gradient_90 {
+  background: linear-gradient(45deg,#f898fd,#fce274 );
+}
+
+.gradient_91{
+  background: linear-gradient(45deg,#4500a8,#c43df9 );
+}
+
+.gradient_92 {
+  background: linear-gradient(45deg,#4e008e,#880aff );
+}
+
+.gradient_93{
+  background: linear-gradient(45deg,#09091d,#093e6f );
+}
+
+.gradient_94{
+  background: linear-gradient(45deg,#c52526,#eb8320 );
+}
+
+.gradient_95 {
+  background: linear-gradient(45deg,#282b32,#1c1f26);
+}
+
+.gradient_96{
+  background: linear-gradient(45deg,#bf9632,#838638 );
+}
+
+.gradient_97 {
+  background: linear-gradient(45deg,#04223b,#2f7865);
+}
+
+.gradient_98 {
+  background: linear-gradient(45deg,#871a38,#3b112f );
+}
+
+.gradient_99 {
+  background: linear-gradient(45deg,#78538a,#941c52 );
+}
+
+.gradient_100 {
+  background: linear-gradient(45deg,#fab117,#f9e894 );
+}
+
+.gradient_101{
+  background: linear-gradient(45deg,#e6a835,#44256d );
+}
+
+.gradient_102{
+  background: linear-gradient(45deg,#22c1c3,#333333 );
+}
+
+footer {
+  background: #0F2027;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
+footer a {
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 990px) {
+  .nav-item {
+    margin: 3px 3px;
+  }
+}
